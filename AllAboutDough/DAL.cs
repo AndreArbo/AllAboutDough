@@ -11,7 +11,8 @@ namespace AllAboutDough
 
         public string getconnstring()
         {
-            this.connstring = @"Data Source = (localdb)\MSSQLLocalDB; Initial Catalog = AllAboutDough; Integrated Security = True; Connect Timeout = 30; Encrypt = False; TrustServerCertificate = True; ApplicationIntent = ReadWrite; MultiSubnetFailover = False";
+            // this.connstring = @"Data Source = (localdb)\MSSQLLocalDB; Initial Catalog = AllAboutDough; Integrated Security = True; Connect Timeout = 30; Encrypt = False; TrustServerCertificate = True; ApplicationIntent = ReadWrite; MultiSubnetFailover = False";
+            this.connstring = ConfigurationManager.ConnectionStrings["AllAboutDoughConnection"].ConnectionString;
             return this.connstring;
         }
 
